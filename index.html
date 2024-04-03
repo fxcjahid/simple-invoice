@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/barcodes/JsBarcode.code39.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Invoice</title>
+</head>
+
+<body>
+    <div class="A4Size-container" id="printerElement">
+        <div class="pager-body">
+            <header class="d-flex justifyBetween itemCenter">
+                <div class="brand-content">
+                    <h1 class="heading">From: Hashtag Cloth</h1>
+                    <p class="caption">contact: 01623547800</p>
+                </div>
+                <div class="invoice-details">
+                    <p class="number">Invoice: <span contenteditable="true" id="invoice-number" max="15"
+                            only="number">xxx xxx</span></p>
+                    <p class="date">date</p>
+                </div>
+            </header>
+
+            <div class="invoice-body">
+                <div class="delivery">
+                    <h2 class="title">Delivery To:</h2>
+                    <p class="text"><span contenteditable="true" length="30" only="character">Customer Name</span></p>
+                    <p class="text">Phone: <span contenteditable="true" max="13" only="number">016 xxx xxxx</span></p>
+                    <p class="text">Address: <span contenteditable="true" length="80">Dhaka - xxx xx</span></p>
+                </div>
+                <div class="products">
+                    <div class="summary">
+                        <h2 class="title">Product Detail:</h2>
+                        <p class="text line-height">Name: <span contenteditable="true" length="30"
+                                only="character">Product Name</span></p>
+                        <p class="text">weight: <span contenteditable="true" length="10">0.50 KG</span>
+                        </p>
+                        <p class="text">Quantity: <span contenteditable="true" max="3" only="number">01</span></p>
+                    </div>
+                    <div class="order-details">
+                        <div class="bar-code">
+                            <svg id="barcode"></svg>
+                        </div>
+                        <div class="collect-amount">
+                            <h1>Collect Amount: <span contenteditable="true" max="6" only="number">xxx</span> TK</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="invoice-footer">
+                <div class="text" contenteditable="true">No return or exchange is accepted.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pager-controler">
+        <button id="print">Print</button>
+        <button id="duplicateButton">Duplicate</button>
+        <button id="removeButton" style="display:none;">Remove</button>
+    </div>
+</body>
+
+<script src="assets/js/main.js"></script>
+
+</html>
