@@ -1,1 +1,1 @@
-![brand](https://github.com/fxcjahid/simple-invoice/assets/33903532/e23700c9-eda7-433a-82a9-b1b809e9ac18)
+![brand](https://github.com/fxcjahid/simple-invoice/assets/33903532/53c24271-fc8f-4a0a-ab15-5973c894c730)
